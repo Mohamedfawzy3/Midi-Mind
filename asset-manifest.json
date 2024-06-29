@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/graduation/static/css/main.b148961d.css",
+    "main.js": "/graduation/static/js/main.3325de19.js",
+    "static/css/561.6567d904.chunk.css": "/graduation/static/css/561.6567d904.chunk.css",
+    "static/js/561.b46517ec.chunk.js": "/graduation/static/js/561.b46517ec.chunk.js",
+    "static/css/56.31d6cfe0.chunk.css": "/graduation/static/css/56.31d6cfe0.chunk.css",
+    "static/js/56.c5e92aa9.chunk.js": "/graduation/static/js/56.c5e92aa9.chunk.js",
+    "static/js/453.b600e3d4.chunk.js": "/graduation/static/js/453.b600e3d4.chunk.js",
+    "static/media/pg25.jpg": "/graduation/static/media/pg25.a9bdc69b46f23865689c.jpg",
+    "static/media/contact.jpg": "/graduation/static/media/contact.a4c3df86e9eacb90e05f.jpg",
+    "static/media/shapes-light.png": "/graduation/static/media/shapes-light.2ce136cf8da094de293d.png",
+    "static/media/doctor.jpeg": "/graduation/static/media/doctor.c5d479733f6dc5bcf04f.jpeg",
+    "static/media/logo5.png": "/graduation/static/media/logo5.01e97ee5869939d34b21.png",
+    "static/media/RR.jpg": "/graduation/static/media/RR.80c0a0969088b40493cb.jpg",
+    "static/media/for.jpg": "/graduation/static/media/for.93e5f6748f18723efaee.jpg",
+    "static/media/SS.jpg": "/graduation/static/media/SS.67198d5dd610603bb045.jpg",
+    "static/media/TT.jpg": "/graduation/static/media/TT.524f9b95ead6a5cfb6b1.jpg",
+    "static/media/DD.jpg": "/graduation/static/media/DD.0f4b2e2f5c973e66e6cc.jpg",
+    "static/media/PP.jpg": "/graduation/static/media/PP.2936a31ec526c9ede89e.jpg",
+    "static/media/LL.jpg": "/graduation/static/media/LL.e89c5ccce01d984d7a20.jpg",
+    "static/media/blood-presure3.png": "/graduation/static/media/blood-presure3.15b9fcc05dcb6234d8d1.png",
+    "static/media/qw.jpg": "/graduation/static/media/qw.c36f66698c5dc083c7e9.jpg",
+    "static/media/height.png": "/graduation/static/media/height.f65caf84ffa02865cecc.png",
+    "static/media/XX.jpg": "/graduation/static/media/XX.6a179fc9f96b26b87e44.jpg",
+    "static/media/pdf.svg": "/graduation/static/media/pdf.9ae431294cccc46fea9c16ea41a2fb13.svg",
+    "index.html": "/graduation/index.html",
+    "main.b148961d.css.map": "/graduation/static/css/main.b148961d.css.map",
+    "main.3325de19.js.map": "/graduation/static/js/main.3325de19.js.map",
+    "561.6567d904.chunk.css.map": "/graduation/static/css/561.6567d904.chunk.css.map",
+    "561.b46517ec.chunk.js.map": "/graduation/static/js/561.b46517ec.chunk.js.map",
+    "56.c5e92aa9.chunk.js.map": "/graduation/static/js/56.c5e92aa9.chunk.js.map",
+    "453.b600e3d4.chunk.js.map": "/graduation/static/js/453.b600e3d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b148961d.css",
+    "static/js/main.3325de19.js"
+  ]
+}
