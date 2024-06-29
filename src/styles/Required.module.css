@@ -1,0 +1,27 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+body {
+  /* font-family: 'Marhey', sans-serif; */
+  font-family: "Tajawal", sans-serif;
+  direction: rtl;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+:root {
+  --main-link-hover: #f5a425;
+  --main-transation: 0.3s;
+  --a-background: #a12c2f;
+  --main-text-color: #1f272b;
+  --main-backGraound:#ecf1f9;
+}
+.content{
+  background-color: var(--main-backGraound);
+ min-height :100vh;;
+}
+.navbar_height{
+  min-height: 95px;
+}

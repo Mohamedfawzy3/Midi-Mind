@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+body {
+  /* font-family: 'Marhey', sans-serif; */
+  font-family: "Tajawal", sans-serif;
+  direction: rtl;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+:root {
+  --main-link-hover: #f5a425;
+  --main-transation: 0.3s;
+  --a-background: #a12c2f;
+  --main-text-color: #1f272b;
+  --main-backGraound:#ecf1f9;
+}
+.visit_info{
+    
+  
+}
+.visit_info >form{
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+.visit_info input,.visit_info textarea{
+ outline: none;
+    padding: 3px 10px;
+    /* border: 1px solid #c0c5c4; */
+    border: none;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+/* model  */
+.model_btn {
+  background: #0ba0cd;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  position: fixed;
+  bottom: 20px;
+ box-shadow: 0 2px 8px rgb(0 0 0 / 76%);
+}
+.visit_box{
+  border: 1px solid #eee;
+
+  background: #f9f9f9;
+
+}
+.visit_box h4{
+  color: #009999;
+}
+.visit_box:not(:first-child) input{
+  direction: ltr !important;
+}

@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+body {
+  /* font-family: 'Marhey', sans-serif; */
+  font-family: "Tajawal", sans-serif;
+
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --main-link-hover: #f5a425;
+  --main-transation: 0.3s;
+  --a-background: #a12c2f;
+  --main-text-color: #1f272b;
+  --main-backGraound: #ecf1f9;
+}
+.box {
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  direction: ltr;
+  
+}
+@media (min-width: 765px) {
+  .box {
+    min-width: calc((100% - 20px) / 2);
+  }
+}
+@media (min-width: 991px) {
+  .box {
+    min-width: calc((100% - 40px) / 3);
+  }
+}
+
+
+@media (max-width: 465px) {
+  .box {
+    width: 100%;
+  }
+}
+.box .download{
+  color: #616161;
+  cursor: pointer;
+}
+.box .image{
+  width: 100%;
+  height: 150px;
+ border-bottom: 1px solid #eee; 
+ margin: auto;
+ 
+}
+.box .image img{
+  width: 100px;
+  
+}
+.box .footer{
+  color: #616161;
+  font-weight: 500;
+}

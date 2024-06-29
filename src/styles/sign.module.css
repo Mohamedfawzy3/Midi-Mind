@@ -1,0 +1,31 @@
+body {
+  direction: rtl;
+  box-sizing: border-box;
+}
+:root {
+  --main-link-hover: #f5a425;
+  --main-transation: 0.3s;
+  --a-background: #a12c2f;
+  --main-text-color: #1f272b;
+}
+.box h2 {
+  color: var(--main-text-color);
+}
+.inputChange {
+  border: none;
+  background-color: #f4f3f3;
+}
+input::placeholder {
+  font-size: 12px;
+  color: #778686 !important;
+}
+label {
+  color: #009999 !important;
+}
+.body {
+  background-color: #ecf1f9;
+  min-height: 100vh;
+  display:  flex ;
+  justify-content: center;
+  align-items: center;
+}

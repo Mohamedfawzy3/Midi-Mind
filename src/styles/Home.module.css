@@ -1,0 +1,119 @@
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+* {
+  font-family: "Tajawal", sans-serif;
+  direction: rtl;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --main-link-hover: #f5a425;
+  --main-transation: 0.3s;
+  --a-background: #a12c2f;
+  --main-text-color: #1f272b;
+}
+
+.Box {
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  background-image: url("../images/shapes-light.png");
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  transition: var(--main-transation);
+  margin: 0px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.start_button {
+  padding: 7px 32px;
+  font-size: 15px;
+  background: #32c2e9d7;
+  color: rgb(9, 9, 9);
+  border: none;
+  border-radius: 5px;
+  transition: var(--main-transation);
+  box-shadow: 2px 2px 15px #000000;
+}
+
+.homeContent {
+  color: var(--main-text-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.homeContent div {
+  font-size: 45px;
+  margin: 20 0px;
+}
+
+.info {
+  margin: 30px auto;
+  background: white;
+  border-radius: 3px;
+}
+
+.members {
+  background-color: white;
+}
+
+.members .box {
+  border: 1px solid #d5d5d5;
+  padding: 20px;
+  background-color: white;
+}
+
+.members .image {
+  font-size: 50px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.members .image img {
+  width: 100%;
+}
+
+.why_us .text {
+  width: 50%;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.why_us .image img {
+  cursor: pointer;
+  width: 50%;
+  height: 50%;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.why_us .image img:hover {
+  transform: scale(0.5);
+}
+
+.info img {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  transition: 0.5s;
+}
+
+.info img:hover {
+  transform: scale(1.5);
+}

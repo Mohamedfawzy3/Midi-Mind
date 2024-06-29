@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+body{
+  box-sizing: border-box;
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
+}
+:root {
+  --main-link-hover: #f5a425;
+  --main-transation: 0.3s;
+  --a-background: #a12c2f;
+  --main-text-color: #1f272b;
+}
+.contact_us {
+  background-image: url("../images/contact.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.contact_us .box .contact_info {
+  background-color: rgba(57, 154, 110, 0.949);
+  background-size: cover;
+  border-radius: 30px;
+  color: white;
+}
+.contact_us .box .contact_form {
+  background-color:#eee;
+  border-radius: 30px;
+}
+.contact_us .box .contact_info .phone,
+.contact_us .box .contact_info .email,
+.contact_us .box .contact_info .address,
+.contact_us .box .contact_info .whatsapp {
+  border-bottom: 1px solid #080707;
+  border-radius: 10px;
+}
+.contact_us .box .contact_form form input,
+.contact_us .box .contact_form form textarea {
+  border: none;
+  border-radius: 15px;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #f7f7f7;
+  outline: none;
+  width: 100%;
+  text-align: center;
+}

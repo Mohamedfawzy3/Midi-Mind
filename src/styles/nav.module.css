@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+/* Your other styles */
+
+body {
+  direction: rtl;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  /* font-family: 'Marhey', sans-serif; */
+  font-family: "Tajawal", sans-serif;
+}
+
+:root {
+  --main-link-hover: #f5a425;
+  --main-transation: 0.3s;
+  --a-background: #a12c2f;
+  --main-text-color: #1f272b;
+}
+ul {
+  transition: var(--main-transation);
+  margin: 0px;
+}
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-size: 17px;
+  padding: 4px 8px;
+  display: inline-block;
+  margin: 0px 3px;
+  transition: var(--main-transation);
+}
+ul li a:hover {
+  color: #2c996f;
+}
+
+.nav {
+  background: white;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.nav .navContainer {
+  min-height: 85px;
+}
+
+.nav button {
+  border: 1px solid #ddd;
+  background: transparent;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: var(--main-text-color);
+  font-size: 10px;
+  font-weight: bold;
+  transition: var(--main-transation);
+}
+.nav button:hover {
+  background-color: #2c996f;
+  border-color: #2c996f;
+}
+.profile{
+}
+.profile .profile_img{
+  overflow: hidden;
+  border-radius: 50%;
+}.profile .profile_img img{
+  width: 30px ;
+  height: 30px;
+}
+.profile span{
+  font-size: 12px;
+  font-weight: bold;
+}
+.icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  text-align: center;
+  display: none;
+}
+.icon span {
+  display: inline-block;
+  height: 2px;
+
+  background-color: rgb(83, 83, 83);
+}
+.icon span:first-child {
+  width: 70%;
+  transition: var(--main-transation);
+}
+.icon span:nth-child(2) {
+  width: 100%;
+  transition: 0.3s;
+  margin: 9px 0px;
+}
+.icon span:last-child {
+  width: 70%;
+  transition: var(--main-transation);
+}
+@media (max-width: 575px) {
+  ul {
+    padding: 0px;
+  }
+  .nav ul li {
+    padding: 5px;
+    border-bottom: 1px solid var(--main-text-color);
+  }
+  .links {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    right: 0px;
+    top: 88px;
+    text-align: center;
+  }
+  .icon {
+    display: flex;
+  }
+}
+.logo img{
+  width: 130px;
+  }

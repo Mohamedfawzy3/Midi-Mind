@@ -1,0 +1,495 @@
+{
+    "patients": [
+        {
+            "id": 0,
+            "name": "على محمد سعيد",
+            "age": 40,
+            "gender": 1,
+            "birth_date": "10/05/1988",
+            "blood_type": "O",
+            "contact_info": {
+                "phone": "01024869884",
+                "email": "mohammedromail94@gmail.com",
+                "address": {
+                    "govern": "المنوفيه",
+                    "city": "الباجور",
+                    "street": "ابوسنيطه"
+                }
+            },
+            "var_info": {
+                "blood_pressure": {
+                    "min": 80,
+                    "max": 120
+                },
+                "height": 165,
+                "weight": 70
+            },
+            "important_medical_issues": [
+                {
+                    "issue": "الحساسية",
+                    "state": "معروفة",
+                    "facts": [
+                        "المريض لديه حساسية تجاه البنسلين"
+                    ]
+                },
+                {
+                    "issue": "الأدوية الحالية",
+                    "state": "معروفة",
+                    "facts": [
+                        "المريض يتناول الأسبرين لتخفيف الصداع"
+                    ]
+                },
+                {
+                    "issue": "التاريخ الطبي",
+                    "state": "معروف",
+                    "facts": [
+                        "خضع المريض لعملية استئصال الزائدة الدودية قبل خمس سنوات"
+                    ]
+                },
+                {
+                    "issue": "الحالات الطبية القائمة",
+                    "state": "معروفة",
+                    "facts": [
+                        "المريض يعاني من ارتفاع ضغط الدم"
+                    ]
+                },
+                {
+                    "issue": "حالة الحمل أو الرضاعة",
+                    "state": "غير معروفة",
+                    "facts": []
+                },
+                {
+                    "issue": "عمر المريض ووزنه",
+                    "state": "معروف",
+                    "facts": [
+                        "المريض يبلغ من العمر 45 عامًا ويزن 70 كجم"
+                    ]
+                },
+                {
+                    "issue": "وظائف الكبد",
+                    "state": "معروفة",
+                    "facts": [
+                        "نتائج اختبارات وظائف الكبد للمريض طبيعية"
+                    ]
+                },
+                {
+                    "issue": "وظائف الكلى",
+                    "state": "معروفة",
+                    "facts": [
+                        "المريض يتلقى الغسيل الكلوي بسبب فشل كلوي مزمن"
+                    ]
+                },
+                {
+                    "issue": "ضغط الدم",
+                    "state": "معروف",
+                    "facts": [
+                        "ضغط الدم للمريض مسجل عند 140/90 ملم زئبق"
+                    ]
+                },
+                {
+                    "issue": "معدل ضربات القلب",
+                    "state": "معروف",
+                    "facts": [
+                        "معدل ضربات القلب الطبيعي للمريض 70 نبضة في الدقيقة"
+                    ]
+                },
+                {
+                    "issue": "مستويات السكر في الدم",
+                    "state": "معروفة",
+                    "facts": [
+                        "سكر الدم الصائم للمريض 120 ملغ/دل"
+                    ]
+                },
+                {
+                    "issue": "تفاعلات الدواء",
+                    "state": "معروفة",
+                    "facts": [
+                        "المريض يتناول دواء يتفاعل مع الأسبرين"
+                    ]
+                },
+                {
+                    "issue": "الآثار الجانبية المحتملة والتفاعلات السلبية",
+                    "state": "معروفة",
+                    "facts": [
+                        "الدواء قد يسبب دوار وجفاف الفم كآثار جانبية"
+                    ]
+                },
+                {
+                    "issue": "الموانع",
+                    "state": "معروفة",
+                    "facts": [
+                        "المريض يعاني من حساسية تجاه مكونات الدواء الموصوف"
+                    ]
+                },
+                {
+                    "issue": "قدرة المريض على الالتزام بنظام الدواء",
+                    "state": "غير معروف",
+                    "facts": []
+                },
+                {
+                    "issue": "التعليمات الخاصة",
+                    "state": "معروفة",
+                    "facts": [
+                        "يجب تناول الدواء مع الطعام"
+                    ]
+                },
+                {
+                    "issue": "العوامل الوراثية",
+                    "state": "معروفة",
+                    "facts": [
+                        "يوجد تاريخ عائلي لمرض السكري"
+                    ]
+                },
+                {
+                    "issue": "العوامل النفسية",
+                    "state": "معروفة",
+                    "facts": [
+                        "المريض يعاني من اكتئاب مزمن"
+                    ]
+                },
+                {
+                    "issue": "العوامل الاجتماعية",
+                    "state": "معروفة",
+                    "facts": [
+                        "المريض يعيش وحيدًا دون دعم عائلي"
+                    ]
+                },
+                {
+                    "issue": "العوامل الغذائية",
+                    "state": "معروفة",
+                    "facts": [
+                        "المريض يتبع نظام غذائي منخفض الصوديوم"
+                    ]
+                }
+            ],
+            "visite": [
+                {
+                    "doctor": "امير مكرم المرزوقى",
+                    "dep": "اخصائى الباطنه وامراض القلب",
+                    "info": {
+                        "phone": "01024869884",
+                        "adress": "الباجور-بهناى"
+                    },
+                    "date": {
+                        "day": 13,
+                        "monthe": 9,
+                        "year": 2021
+                    },
+                    "rosheta": [
+                        {
+                            "name": "pandol",
+                            "description": "كبسوله صباحا ومساء"
+                        },
+                        {
+                            "name": "polyfresh",
+                            "description": "3 مرات يوميا"
+                        },
+                        {
+                            "name": "neromax",
+                            "description": "كبسوله كل 12 ساعه"
+                        }
+                    ],
+                    "tahlil": [
+                        "Hepatitis Panel",
+                        "Lipid Panel"
+                    ],
+                    "ashea": [
+                        "Echocardiography"
+                    ]
+                },
+                {
+                    "doctor": "عبدالفتاح قدرى",
+                    "dep": "مخ واعصاب",
+                    "info": {
+                        "phone": "01023434343",
+                        "adress": "الباجور"
+                    },
+                    "date": {
+                        "day": 30,
+                        "monthe": 4,
+                        "year": 2020
+                    },
+                    "rosheta": [
+                        {
+                            "name": "pandol",
+                            "description": "كبسوله صباحا ومساء"
+                        },
+                        {
+                            "name": "polyfresh",
+                            "description": "3 مرات يوميا"
+                        },
+                        {
+                            "name": "neromax",
+                            "description": "كبسوله كل 12 ساعه"
+                        }
+                    ],
+                    "tahlil": [
+                        "Hepatitis Panel",
+                        "Lipid Panel"
+                    ],
+                    "ashea": [
+                        "Echocardiography"
+                    ]
+                },
+                {
+                    "doctor": "طارق عبدالرحمن",
+                    "dep": "انف واذن وحنجره",
+                    "info": {
+                        "phone": "012477665",
+                        "adress": "شبين الكوم"
+                    },
+                    "date": {
+                        "day": 23,
+                        "monthe": 12,
+                        "year": 2023
+                    },
+                    "rosheta": [
+                        {
+                            "name": "pandol",
+                            "description": "كبسوله صباحا ومساء"
+                        },
+                        {
+                            "name": "polyfresh",
+                            "description": "3 مرات يوميا"
+                        },
+                        {
+                            "name": "neromax",
+                            "description": "كبسوله كل 12 ساعه"
+                        }
+                    ],
+                    "tahlil": [
+                        "Hepatitis Panel",
+                        "Lipid Panel"
+                    ],
+                    "ashea": [
+                        "Echocardiography"
+                    ]
+                },
+                {
+                    "doctor": "رحاب عجور",
+                    "dep": "امراض جلديه",
+                    "info": {
+                        "phone": "012122377",
+                        "adress": "شبين الكوم"
+                    },
+                    "date": {
+                        "day": 4,
+                        "monthe": 1,
+                        "year": 2024
+                    },
+                    "rosheta": [
+                        {
+                            "name": "pandol",
+                            "description": "كبسوله صباحا ومساء"
+                        },
+                        {
+                            "name": "polyfresh",
+                            "description": "3 مرات يوميا"
+                        },
+                        {
+                            "name": "neromax",
+                            "description": "كبسوله كل 12 ساعه"
+                        }
+                    ],
+                    "tahlil": [
+                        "Hepatitis Panel",
+                        "Lipid Panel"
+                    ],
+                    "ashea": [
+                        "Echocardiography"
+                    ]
+                },
+                {
+                    "doctor": "خالد السباعى",
+                    "dep": "جراحه لعيون",
+                    "info": {
+                        "phone": "0159082329",
+                        "adress": "الباجور"
+                    },
+                    "date": {
+                        "day": 29,
+                        "monthe": 3,
+                        "year": 2024
+                    },
+                    "rosheta": [
+                        {
+                            "name": "pandol",
+                            "description": "كبسوله صباحا ومساء"
+                        },
+                        {
+                            "name": "polyfresh",
+                            "description": "3 مرات يوميا"
+                        },
+                        {
+                            "name": "neromax",
+                            "description": "كبسوله كل 12 ساعه"
+                        }
+                    ],
+                    "tahlil": [
+                        "Hepatitis Panel",
+                        "Lipid Panel"
+                    ],
+                    "ashea": [
+                        "Echocardiography"
+                    ]
+                },
+                {
+                    "doctor": "",
+                    "dep": "اصائى مخ واعصاب",
+                    "info": {
+                        "phone": "0114935495",
+                        "adress": "شساة"
+                    },
+                    "date": {
+                        "day": 26,
+                        "monthe": 6,
+                        "year": 2022
+                    },
+                    "rosheta": [
+                        {
+                            "name": "pandol",
+                            "description": "كبسوله صباحا ومساء"
+                        },
+                        {
+                            "name": "polyfresh",
+                            "description": "3 مرات يوميا"
+                        },
+                        {
+                            "name": "neromax",
+                            "description": "كبسوله كل 12 ساعه"
+                        }
+                    ],
+                    "tahlil": [
+                        "Hepatitis Panel",
+                        "Lipid Panel"
+                    ],
+                    "ashea": [
+                        "Echocardiography"
+                    ]
+                },
+                {
+                    "doctor": "عبدالرحمن خطاب",
+                    "dep": "عظام",
+                    "info": {
+                        "phone": "0120220323",
+                        "adress": "bagour-city"
+                    },
+                    "date": {
+                        "day": 23,
+                        "monthe": 5,
+                        "year": 2023
+                    },
+                    "rosheta": [
+                        {
+                            "name": "pandol",
+                            "description": "كبسوله صباحا ومساء"
+                        },
+                        {
+                            "name": "polyfresh",
+                            "description": "3 مرات يوميا"
+                        },
+                        {
+                            "name": "neromax",
+                            "description": "كبسوله كل 12 ساعه"
+                        }
+                    ],
+                    "tahlil": [
+                        "Hepatitis Panel",
+                        "Lipid Panel"
+                    ],
+                    "ashea": [
+                        "Echocardiography"
+                    ]
+                }
+            ],
+            "done_tahalil": [
+                {
+                    "name": "CBC",
+                    "date": "31/12/2022",
+                    "doctor": "محمد مصطفى",
+                    "result": "result"
+                },
+                {
+                    "name": "CRP",
+                    "date": "23/3/2019",
+                    "doctor": "Ahmed gad",
+                    "result": "result"
+                },
+                {
+                    "name": "CMP",
+                    "date": "4/4/2020",
+                    "doctor": "خالد السباعى",
+                    "result": "result"
+                },
+                {
+                    "name": "BMP",
+                    "date": "31/12/2022",
+                    "doctor": "طارق عبدالرحمن",
+                    "result": "result"
+                },
+                {
+                    "name": "LFTs",
+                    "date": "7/9/2022",
+                    "doctor": "طارق عبدالرحمن",
+                    "result": "result"
+                },
+                {
+                    "name": " PSA",
+                    "date": "20/10/2023",
+                    "doctor": "علاء ياسين",
+                    "result": "result"
+                },
+                {
+                    "name": "Lipid Panel",
+                    "date": "22/2/2024",
+                    "doctor": "عبدالفتاح قدرى",
+                    "result": "result"
+                }
+            ],
+            "done_ashea": [
+                {
+                    "name": "CBC",
+                    "date": "31/12/2022",
+                    "doctor": "محمد مصطفى",
+                    "result": "result"
+                },
+                {
+                    "name": "CRP",
+                    "date": "23/3/2019",
+                    "doctor": "Ahmed gad",
+                    "result": "result"
+                },
+                {
+                    "name": "CMP",
+                    "date": "4/4/2020",
+                    "doctor": "خالد السباعى",
+                    "result": "result"
+                },
+                {
+                    "name": "BMP",
+                    "date": "31/12/2022",
+                    "doctor": "طارق عبدالرحمن",
+                    "result": "result"
+                },
+                {
+                    "name": "LFTs",
+                    "date": "7/9/2022",
+                    "doctor": "طارق عبدالرحمن",
+                    "result": "result"
+                },
+                {
+                    "name": " PSA",
+                    "date": "20/10/2023",
+                    "doctor": "علاء ياسين",
+                    "result": "result"
+                },
+                {
+                    "name": "Lipid Panel",
+                    "date": "22/2/2024",
+                    "doctor": "عبدالفتاح قدرى",
+                    "result": "result"
+                }
+            ]
+        }
+    ]
+}
