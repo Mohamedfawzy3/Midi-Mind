@@ -179,8 +179,8 @@ const git_suger=()=>{
               </div>
               <div style={{ direction: "ltr" }} className="mb-3">
                 <img
-                  src={require("../images/sugar-blood.png")}
-                  alt="height_icon"
+                  src={require("../images/suger_measerment.png")}
+                  alt="suger_icon"
                   style={{ width: "30px" }}
                 />
                 <span className="ms-2">{suger_reading} </span>
@@ -245,13 +245,15 @@ const git_suger=()=>{
                     onChange={handle_note}
                     placeholder="Type a new note in english"
                   ></textarea>
-                  <button
+                 <div className="text-center mt-2">
+                 <button
                     type="submit"
-                    className="btn btn-dark"
+                    className="btn btn-dark btn-sm"
                    
                   >
-                    Add Note
+                    اضافه
                   </button>
+                 </div>
                   </form>
                 </div>
               </div>

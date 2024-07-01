@@ -5,6 +5,7 @@ import axios from "axios";
 const Signin = () => {
   let [user_info, setUser_info] = useState({});
   const [message, setMessage] = useState("");
+  const [errMsg,setErrMsg]=useState("")
   const [Button_display,setButton_display]=useState("")
   const navigate = useNavigate();
   const HandleSubmit = (e) => {
@@ -24,11 +25,11 @@ const Signin = () => {
         get_userId();
         setMessage("تم تسجيل الدخول بنجاح");
         setTimeout(()=>{
-          navigate("/home");
+          navigate("/home",{replace:true});
         },1000)
       })
       .catch((err) => {
-        setMessage(err.response.data);
+        setErrMsg(err.response.data);
         setButton_display("")
       });
   }
@@ -86,6 +87,7 @@ const Signin = () => {
                   onInput={(e) => e.target.setCustomValidity("")}
                   required
                   onChange={HandleSubmit}
+                  onFocus={()=>setErrMsg("")}
                 />
               </div>
               {/* Password input */}
@@ -102,6 +104,7 @@ const Signin = () => {
                   aria-describedby="inputGroupPrepend2"
                   required
                   onChange={HandleSubmit}
+                  onFocus={()=>setErrMsg("")}
                 />
               </div>
               {/* Display error mesage */}
@@ -111,6 +114,13 @@ const Signin = () => {
                 </div>
               ) : null
               
+            }
+            {
+             errMsg!= "" ? (
+                <div class="alert alert-danger fw-bolder text-center" role="alert">
+                  {errMsg}
+                </div>
+              ) : null
             }
               {/* Sing in button */}
               <div class="col-12 text-center">

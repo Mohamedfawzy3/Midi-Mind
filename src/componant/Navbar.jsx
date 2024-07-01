@@ -2,12 +2,23 @@ import React, { useEffect } from "react";
 import { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import style from "../styles/nav.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import{faArrowRightFromBracket} from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 const Navbar = () => {
   const [flag, setflag] = useState(true);
   const spanRefs = useRef([]);
   const ulref = useRef();
+
   const [token, SetToken] = useState(localStorage.getItem("token"));
+  const logout=()=>{
+ localStorage.clear()
+ 
+ navigate("/home")
+  
+  window.location.reload()
+  
+}
   const handleIconClick = () => {
     setflag(!flag);
     if (flag) {
@@ -28,9 +39,7 @@ const Navbar = () => {
     }
   };
   let navigate = useNavigate();
-  const ChangePath = (path) => {
-    navigate(path);
-  };
+
   let [userData,setUserData]=useState({})
   const Get_signup_user=(userType,userId)=>{
 axios.get(`https://localhost:7189/api/${userType}/id?id=${userId}`)
@@ -44,6 +53,7 @@ setUserData(res.data)
 useEffect(()=>{
 Get_signup_user(localStorage.getItem("userType"),localStorage.getItem("Id"))
 },[])
+
   return (
     <div>
       <div className={`${style.nav} `}>
@@ -99,7 +109,7 @@ Get_signup_user(localStorage.getItem("userType"),localStorage.getItem("Id"))
               </ul>
 
               {/*Handle regiteration buttons and profile info*/}
-              {token ? (
+              {token ? <>
                 <div className={`d-flex align-items-center d-none d-sm-flex ${style.profile}`}>
                   <span>{userData.user?.userName||userData.name}</span>
                   <div className={`${style.profile_img} me-2`}>
@@ -112,16 +122,19 @@ Get_signup_user(localStorage.getItem("userType"),localStorage.getItem("Id"))
                     </Link>
                   </div>
                 </div>
-              ) : (
+                {/* log out */}
+                <div><div className ={`${style.logout_btn}`}onClick={logout}><FontAwesomeIcon icon={faArrowRightFromBracket} /></div></div>
+                </>
+              : (
                 <div className="m-4 m-sm-1">
                   <button
-                    onClick={() => ChangePath("/signin")}
+                    onClick={() => navigate("/signin")}
                     className="btn btn-primary px-2 ms-1"
                   >
                     تسجيل الدخول
                   </button>
                   <button
-                    onClick={() => ChangePath("/signup")}
+                    onClick={() => navigate("/signup")}
                     className="btn-dark btn px-2"
                   >
                     انشاء حساب

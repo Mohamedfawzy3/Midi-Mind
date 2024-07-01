@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const FindPatient = () => {
   const [patient_ssn, setPatien_ssn] = useState();
@@ -23,6 +24,8 @@ const FindPatient = () => {
     navigate(`/Patiant/${patientId}`)
   }
   return (
+    <>
+    <Navbar/>
     <div
       className="d-flex align-items-center justify-content-center"
       style={{ height: "100vh" }}
@@ -47,6 +50,7 @@ const FindPatient = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

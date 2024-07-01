@@ -20,7 +20,7 @@ const [flag,setFlag]=useState(true)
 <div className={`${style.side_bar} p-2 bg-white text-center`}>
     <ul className="p-0">
     <li >
-  <Link className={`fw-medium p-1`} to="rosheta">الزيارات</Link>
+  <Link className={`fw-medium p-1`} to="rosheta">الروشتات</Link>
  
 </li>
 <li >
