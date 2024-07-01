@@ -1,22 +1,23 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import bloodStyle from "../styles/BloodPressure.module.css"
+import Style from "../styles/sugar_pressures.module.css"
 import Navbar from './Navbar';
 const Blood_Pressure = () => {
-    const [blood_pressure,setBlood_pressure]=useState({})
-    const [patiantId,setPatientId]=useState()
+    const [reading_data,setReading_data]=useState({})
+    
  const {id}=useParams()
+ const{type}=useParams()
  const [reload,setReload]=useState(0);
-   let [blood_pressur_data,setBlood_pressur_data]=useState()
+   
 let [readingObject,setReadingObject]=useState({"patientId":id})
 useEffect(()=>{
-    get_blood_pressur_data()
+    get_record_reading()
 },[reload])
-const get_blood_pressur_data=()=>{
-    axios.get(`https://localhost:7189/api/PatientBloodPressures/${id}`)
+const get_record_reading=()=>{
+    axios.get(`https://localhost:7189/api/Patient${type}/${id}`)
     .then(res=>{
-        setBlood_pressure(res.data.reverse())
+        setReading_data(res.data.reverse())
         
         
        })
@@ -35,36 +36,49 @@ setReadingObject((old)=>({
     }
     let NewReading=(e)=>{
         e.preventDefault()
-        axios.post("https://localhost:7189/api/PatientBloodPressures",readingObject)
+        axios.post(`https://localhost:7189/api/Patient${type}`,readingObject)
         .then((res)=>setReload(res.data))
         
         .catch((err)=>console.log(err))
     }
     return (
-        <div className={`${bloodStyle.blood_pressure}`}> 
-<div className={`${bloodStyle.nav_height}`}>
+        <div className={`${Style.pressures}`}> 
+<div className={`${Style.nav_height}`}>
 <Navbar/>
 </div>
 <div className={` text-center px-2`}>
-        <h3>Blood Pressures Reading </h3>
+  {type=="BloodPresseres"? <h3>سجل قراءات ضغط الدم</h3>:  <h3>سجل قراءات مستوى السكر    </h3>}
+      
         <div className='d-flex gap-3'>
         {/* add new raeding */}
         <div className='col-12 col-sm-2 col-md-4 bg-white container rounded-3 py-3'>
             <h4>قراءه جديده</h4>
             <form action="" className='container mt-3' onSubmit={NewReading}>
            <div className=''>
+           {type=="BloodSugers"? 
            <div class="col-md-12">
-                <input
-                  type="text"
-                  class={`form-control`}
-                  id=""
-                  placeholder="ضغط الدم الانقباضى "
-                  required
-                  name="systolicPressure"
-                  onChange={HandleSumbit}
-                />
-              </div>
-            -
+           <input
+             type="text"
+             class={`form-control`}
+             id="bloodSugarLevel"
+             placeholder="ادخل قراءه السكر"
+             required
+             name="bloodSugarLevel"
+             onChange={HandleSumbit}
+           />
+         </div>
+            :<>
+            <div class="col-md-12 mb-2">
+            <input
+              type="text"
+              class={`form-control`}
+              id=""
+              placeholder="ضغط الدم الانقباضى "
+              required
+              name="systolicPressure"
+              onChange={HandleSumbit}
+            />
+          </div>
               <div class="col-md-12">
                
                 <input
@@ -80,13 +94,15 @@ setReadingObject((old)=>({
                   name="diastolicPressure"
                   onChange={HandleSumbit}
                 />
-              </div>
+              </div> </>
+}
            </div>
+               
               <div><button type='submit' className='btn btn-dark mt-4' >اضافه</button></div>
             </form>
         </div>
        
-         <div className='container bg-white rounded-3'>
+         <div className='container bg-white rounded-3 overflow-x-auto'>
             
         <table class="table table-striped table-hover" style={{direction:"ltr",minWidth:"600px"}}>
 <thead>
@@ -99,11 +115,11 @@ setReadingObject((old)=>({
 </tr>
 </thead>
 <tbody>
-{blood_pressure&&Array.isArray(blood_pressure)&&blood_pressure.map((el,index)=>{
+{reading_data&&Array.isArray(reading_data)&&reading_data.map((el,index)=>{
 return(
     <tr key={index} className='text-center'>
         <td>{index +1}</td>
-        <td>{el.pressure}</td>
+        <td>{type=="BloodSugers"?el.bloodSugarLevel:el.pressure}</td>
         <td>{el.date}</td>
         <td>{el.time}</td>
         

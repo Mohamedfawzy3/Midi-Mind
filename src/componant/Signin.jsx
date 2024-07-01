@@ -22,7 +22,7 @@ const Signin = () => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("userType",res.data.userType)
         get_userId();
-        setMessage("Done");
+        setMessage("تم تسجيل الدخول بنجاح");
         setTimeout(()=>{
           navigate("/home");
         },1000)

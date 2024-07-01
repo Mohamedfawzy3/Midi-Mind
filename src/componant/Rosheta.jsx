@@ -8,6 +8,7 @@ import pdfimg from '../images/pdf.svg'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 const Rosheta = () => {
     const [visition_info, setVisition_info] = useState({});
+    let[msg_apper,setMsg_apper]=useState("")
     const{id}=useParams()
     const navigate=useNavigate()
     useEffect(() => {
@@ -17,7 +18,9 @@ const Rosheta = () => {
           console.log(res.data)
           setVisition_info(res.data);
         })
-        .catch((err) => console.log(err.response.data));
+        .catch((err) => {
+          setMsg_apper(err.response.data)
+          console.log(err.response.data)});
     }, []);
     return (
       <>
@@ -47,14 +50,14 @@ const Rosheta = () => {
 
 
       </div>
-        :
-        <div className='text-center position-relative mt-5'>
+        : msg_apper==""? <div className='text-center position-relative mt-5'>
         <div className="spinner-border text-primary text-center d-block position-absolute start-50 " role="status" style={{top:"-30px"}}>
        
     </div>
          <span >جارى تحميل البيانات....</span>
-         </div>
-        }
+         </div>: <div>
+        <p className='text-center fw-bold fs-5 mt-3'>{msg_apper}</p>
+       </div> }
     
       </>
     );

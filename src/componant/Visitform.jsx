@@ -45,7 +45,7 @@ let[rosheta,setRosheta]=useState({})
         RoshetaInForm.append("report",value)
         RoshetaInForm.append("patientId",id)
        RoshetaInForm.append("clinicId" ,localStorage.getItem("Id"))
-   console.log(RoshetaInForm)
+   
         }
     const save_tahalil=(e)=>{
       e.preventDefault();

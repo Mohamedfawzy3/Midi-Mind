@@ -5,12 +5,15 @@ import { Link, useParams } from 'react-router-dom';
 const Tahalil = () => {
     const{id}=useParams()
     const[tahalil,setTahalil]=useState()
+    let[msg_apper,setMsg_apper]=useState("")
     useEffect(()=>{
 axios.get(`https://localhost:7189/api/visitLab/${id}`)
 .then((res) => {
     setTahalil(res.data);
   })
-  .catch((err) => console.log(err));
+  .catch((err) =>{
+    setMsg_apper(err.response.data)
+    console.log(err)});
     },[])
     return (
         <>
@@ -41,13 +44,15 @@ axios.get(`https://localhost:7189/api/visitLab/${id}`)
 </tbody>
 </table>
      </div>
-        :  <div className='text-center position-relative mt-5'>
+        : msg_apper==""? <div className='text-center position-relative mt-5'>
         <div className="spinner-border text-primary text-center d-block position-absolute start-50 " role="status" style={{top:"-30px"}}>
        
     </div>
          <span >جارى تحميل البيانات....</span>
-         </div>}
-       
+         </div>: <div>
+        <p className='text-center fw-bold fs-5 mt-3'>{msg_apper}</p>
+       </div>}
+      
         </>
     );
 };

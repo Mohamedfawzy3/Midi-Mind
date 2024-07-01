@@ -50,7 +50,11 @@ const Users = () => {
           ? "https://localhost:7189/api/Radiology/AddRadiology"
           : role == "Clinic"
           ? "https://localhost:7189/api/Clinic/addClinic"
-          : null,
+          : role == "Hospital"
+          ?"https://localhost:7189/api/Hospital/AddHospital"
+          : role == "HealthUnit"
+          ?"https://localhost:7189/api/HealthUnit/AddHealthUnit"
+         : null,
         formData,
         {
           headers: {
@@ -60,7 +64,7 @@ const Users = () => {
         }
       )
       .then((res) => {
-        localStorage.setItem("Id",res.data.labId||res.data.clinicId||res.data.pharmacyId||res.data.radiologyId)
+        localStorage.setItem("Id",res.data.labId||res.data.clinicId||res.data.pharmacyId||res.data.radiologyId||res.data.hospitalId||res.data.healthUnitId)
         setTimeout(() => {
           navigat("/home");
         }, 3000);
@@ -102,12 +106,12 @@ const Users = () => {
               {/* manger name input */}
               <div class="col-md-6">
                 <label for="validationDefault01" class="form-label">
-                  الاسم
+                  المدير
                 </label>
                 <input
                   type="text"
                   class={`form-control ${style.inputChange}`}
-                  placeholder="ادخل اسم المالك"
+                  placeholder="اسم المالك او المدير"
                   id="validationDefault01"
                   onInvalid={(e) =>
                     e.target.setCustomValidity("برجاء ادخال اسم صحيح")
@@ -119,7 +123,7 @@ const Users = () => {
                 />
               </div>
               {/* specilization input */}
-              {role == "Lab" || role == "Radiology" || role=="Clinic"? (
+              {role == "Lab" || role == "Radiology" || role=="Clinic"||role=="Hospital"? (
                 <div class="col-md-12">
                   <label for="specailization" class="form-label">
                     التخصص

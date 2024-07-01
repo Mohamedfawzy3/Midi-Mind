@@ -20,9 +20,19 @@ const Doctor = () => {
   const HandleImage = (e) => {
     setImage(e.target.files[0]);
   };
+  // handle Submtion with 14 number ssn
+ const sumbtion_data=(e)=>{
+  e.preventDefault();
+  if(user_info.ssn.length!==14){
+    setMessage("الرقم القومى يجب ان يكون 14 رقم")
+  }else{
+    creat_user()
+  }
+ }
+  
   // creat function to handle sending data
-  let creat_user = (e) => {
-    e.preventDefault();
+  let creat_user = () => {
+   
     setButton_display("disabled")
     
     const token = localStorage.getItem("token");
@@ -67,7 +77,7 @@ const Doctor = () => {
               <span></span>
               <span></span>
             </div>
-            <form class="row g-3 col-md-10 mx-auto" onSubmit={creat_user}>
+            <form class="row g-3 col-md-10 mx-auto" onSubmit={sumbtion_data}>
               {/* Doctor Name input */}
               <div class="col-md-6">
                 <label for="name" class="form-label">

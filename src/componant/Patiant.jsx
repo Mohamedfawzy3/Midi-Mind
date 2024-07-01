@@ -22,10 +22,15 @@ const Patiant = () => {
   const [contact_info, setContact_info] = useState({});
   const [acttual_useType,setActtual_userType]=useState(localStorage.getItem("userType"))
   const navigate=useNavigate()
+  let [blood_reading,setBloodreading]=useState("0/0")
+  let [suger_reading,setSuger_reading]=useState("0")
   const { id } = useParams();
   useEffect(() => {
-    get_notes();
+
     getPatiantInfo();
+    git_blood_presure();
+    git_suger();
+    get_notes();
   }, [reload]);
   const getPatiantInfo = () => {
     axios
@@ -69,6 +74,33 @@ const Patiant = () => {
     else if (acttual_useType=="Radiology")navigate (`/required/${id}/Scans`)
   else if (acttual_useType=="Pharmacy")navigate(`rosheta`)
  }
+const git_blood_presure=()=>{
+
+  axios.get(`https://localhost:7189/api/PatientBloodPressures/${id}`)
+  .then(res=>{
+    const index=res.data.length-1
+    const element=res.data[index]
+    const read=element.pressure
+    setBloodreading(read)
+  
+  })
+  .catch(err=>{
+    setBloodreading("0/0")
+    console.log(err.response.data)})
+}
+const git_suger=()=>{
+  axios.get(`https://localhost:7189/api/PatientBloodSugers/${id}`)
+  .then(res=>{
+    const index=res.data.length-1
+    const element=res.data[index]
+    const read=element.bloodSugarLevel
+  setSuger_reading(read)
+  
+  })
+  .catch(err=>{
+  setSuger_reading("0")
+    console.log(err.response.data)})
+}
   return (
     <>
     {/* todo box for navbar heigth */}
@@ -142,8 +174,17 @@ const Patiant = () => {
                   alt="blood_presusre_icon"
                   style={{ width: "30px" }}
                 />
-                <span className="ms-2">120/80 mm</span>
-                <Link to='bloodPressure'><FontAwesomeIcon icon={faPenToSquare} /></Link>
+                <span className="ms-2">{blood_reading} mm</span>
+                <Link to='BloodPressures'><FontAwesomeIcon icon={faPenToSquare} /></Link>
+              </div>
+              <div style={{ direction: "ltr" }} className="mb-3">
+                <img
+                  src={require("../images/sugar-blood.png")}
+                  alt="height_icon"
+                  style={{ width: "30px" }}
+                />
+                <span className="ms-2">{suger_reading} </span>
+                <Link to='BloodSugers'><FontAwesomeIcon icon={faPenToSquare} /></Link>
               </div>
               <div style={{ direction: "ltr" }} className="mb-3">
                 <img
@@ -217,7 +258,7 @@ const Patiant = () => {
             </div>
           </section>
           {/* Visitation model */}
-          {acttual_useType=="Clinic"?<><Visitform />
+          {acttual_useType=="Clinic"||"HealthUnit"||"Doctor"?<><Visitform />
            
           </>:null}
           {/* Labs&Radiologies&Pharmacy */}

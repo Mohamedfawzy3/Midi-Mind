@@ -100,7 +100,7 @@ Get_signup_user(localStorage.getItem("userType"),localStorage.getItem("Id"))
 
               {/*Handle regiteration buttons and profile info*/}
               {token ? (
-                <div className={`d-flex align-items-center ${style.profile}`}>
+                <div className={`d-flex align-items-center d-none d-sm-flex ${style.profile}`}>
                   <span>{userData.user?.userName||userData.name}</span>
                   <div className={`${style.profile_img} me-2`}>
                     <Link to="/home">

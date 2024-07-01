@@ -17,7 +17,7 @@ body{
 .nav_height{
     min-height: 95px;
 }
-.blood_pressure{
+.pressures{
 background-color: var(--main-backGraound);
 min-height: 100vh;
 }

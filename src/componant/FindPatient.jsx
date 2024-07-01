@@ -21,27 +21,13 @@ const FindPatient = () => {
   };
   const handle_navigate=(patientId)=>{
     navigate(`/Patiant/${patientId}`)
-    // console.log(userType)
-    // if(userType=="Clinic"){
-    //   navigate(`/Patiant/${patientId}`)
-    //   console.log("clinic")
-    // }
-        
-    //       else if (userType == "Lab")
-    //         navigate(`/required/${patientId}/Tests`)
-    //       else if(userType == "Radiology") 
-         
-    //      navigate(`/required/${patientId}/Scans`)
-    //      else if(userType == "Pharmacy") 
-         
-    //        navigate(`/${patientId}/record/rosheta`)
-           
   }
   return (
     <div
       className="d-flex align-items-center justify-content-center"
       style={{ height: "100vh" }}
     >
+   
       <div className="text-center">
         <input
           type="text"

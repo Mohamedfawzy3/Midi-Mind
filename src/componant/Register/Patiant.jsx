@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import style from "../../styles/sign.module.css";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Patient = () => {
   let [user_info, setUser_info] = useState();
   const [message, setMessage] = useState("");
-  const [Button_display,setButton_display]=useState("")
+  const [Button_display, setButton_display] = useState("");
   const [image, setImage] = useState();
-  const navigate =useNavigate()
+  const navigate = useNavigate();
   const [hash] = useState(window.location.hash.split("/"));
   const [userType, setUserType] = useState(hash[hash.length - 1]);
   const formData = new FormData();
   const token = localStorage.getItem("token");
+  // get data form inputs and conect it with his each name
   const HandleSumbit = (e) => {
     const { name, value } = e.target;
     setUser_info((old) => ({
@@ -20,9 +21,10 @@ const Patient = () => {
       [name]: value,
     }));
   };
+  // get image value from input
   let get_Image = (e) => {
     setImage(e.target.files[0]);
-    user_info_form()
+    user_info_form();
   };
   // convert the data in the shape of form
   const user_info_form = () => {
@@ -32,15 +34,23 @@ const Patient = () => {
       }
     }
     formData.append("image", image);
-    console.log(formData)
+
     return formData;
-    
   };
 
-  console.log(user_info);
+  // handle Submtion with 14 number ssn
+  const sumbtion_data = (e) => {
+    e.preventDefault();
+    if (user_info.ssn.length !== 14) {
+      setMessage("الرقم القومى يجب ان يكون 14 رقم");
+    } else {
+      creat_user();
+    }
+  };
+  // <## post new user ##>
   let creat_user = (e) => {
     e.preventDefault();
-    setButton_display("disabled")
+    setButton_display("disabled");
     user_info_form();
     axios
       .post("https://localhost:7189/api/Patient/AddPatient", formData, {
@@ -50,15 +60,14 @@ const Patient = () => {
         },
       })
       .then((res) => {
-        localStorage.setItem("Id",res.data.patientId)
+        localStorage.setItem("Id", res.data.patientId);
         localStorage.setItem("token", res.data.token);
         navigate("/home");
-        
       })
-      .catch((err) =>{
-        setButton_display("")
-         setMessage(err.response.data)
-        });
+      .catch((err) => {
+        setButton_display("");
+        setMessage(err.response.data);
+      });
   };
   return (
     <div>
@@ -72,7 +81,7 @@ const Patient = () => {
               <span></span>
               <span></span>
             </div>
-            <form class="row g-3 col-md-10 mx-auto" onSubmit={creat_user}>
+            <form class="row g-3 col-md-10 mx-auto" onSubmit={sumbtion_data}>
               {/* name input */}
               <div class="col-md-6">
                 <label for="validationDefault01" class="form-label">
@@ -107,7 +116,6 @@ const Patient = () => {
                   onChange={HandleSumbit}
                 />
               </div>
-
               {/* Birth date input */}
               <div className="col-12">
                 <label for="date" class="form-label">
@@ -134,7 +142,6 @@ const Patient = () => {
                   name="imge"
                   onChange={get_Image}
                 />
-             
               </div>
               {/* Gender input */}
               <div class="col-md-12">

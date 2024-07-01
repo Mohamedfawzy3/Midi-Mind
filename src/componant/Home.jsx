@@ -21,7 +21,7 @@ const Home = () => {
  const handle_startNow_button=()=>{
   if(userType=="Clinic"||userType=="Doctor"||userType=="Lab"||userType=="Pharmacy"||userType=="Radiology")
     navigate('/FindPatient')
-  else if(userType=="Patient"){
+  else if(userType=="patient"){
     navigate(`/Patiant/${localStorage.getItem("Id")}`)
     console.log("fffff")
   }
