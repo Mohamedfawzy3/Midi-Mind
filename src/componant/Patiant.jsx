@@ -19,7 +19,7 @@ const Patiant = () => {
   const [patient, setPatient] = useState({});
   const [patient_notes, setPatent_notes] = useState([]);
   const [note, setNote] = useState({});
-  const [contact_info, setContact_info] = useState({});
+  const [note_disabled_btn, setNote_disabled_btn] = useState("");
   const [acttual_useType,setActtual_userType]=useState(localStorage.getItem("userType"))
   const navigate=useNavigate()
   let [blood_reading,setBloodreading]=useState("0/0")
@@ -57,15 +57,18 @@ const Patiant = () => {
   };
   const postNote = (e) => {
     e.preventDefault()
+    setNote_disabled_btn("disabled")
     const NewNote = { "patientId": id, "note": note };
     axios
       .post("https://localhost:7189/api/PatientNotes", NewNote)
       .then((res) => {
         setReload(res.data)
         console.log(res);
+        setNote_disabled_btn("")
       })
       .catch((err) => {
         console.log(err);
+        setNote_disabled_btn("")
       });
   };
  const navigat_button=()=>{
@@ -207,7 +210,7 @@ const git_suger=()=>{
             </div>
           </div >
          {/* Go ro record Button */}
-         {acttual_useType=="Clinic"?  <div className="text-center"> 
+         {acttual_useType=="Clinic"||acttual_useType=="Doctor"?  <div className="text-center"> 
          <button className={`${style.record_btn} btn btn-dark mt-3`} onClick={()=>navigate(`/${id}/record/rosheta`)}>
            Go to record
         </button>
@@ -248,7 +251,7 @@ const git_suger=()=>{
                  <div className="text-center mt-2">
                  <button
                     type="submit"
-                    className="btn btn-dark btn-sm"
+                    className={`btn btn-dark btn-sm ${note_disabled_btn}`}
                    
                   >
                     اضافه
@@ -260,7 +263,7 @@ const git_suger=()=>{
             </div>
           </section>
           {/* Visitation model */}
-          {acttual_useType=="Clinic"||"HealthUnit"||"Doctor"?<><Visitform />
+          {acttual_useType=="Clinic"||acttual_useType=="HealthUnit"||acttual_useType=="Doctor"?<><Visitform />
            
           </>:null}
           {/* Labs&Radiologies&Pharmacy */}

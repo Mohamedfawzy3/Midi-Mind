@@ -49,7 +49,7 @@ const Patient = () => {
   };
   // <## post new user ##>
   let creat_user = (e) => {
-    e.preventDefault();
+    
     setButton_display("disabled");
     user_info_form();
     axios
