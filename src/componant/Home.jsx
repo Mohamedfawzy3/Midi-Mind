@@ -15,6 +15,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import axios from "axios";
 const Home = () => {
+
   let navigate = useNavigate();
   const [token, SetToken] = useState(localStorage.getItem("token"));
   const [userType] = useState(localStorage.getItem("userType"));

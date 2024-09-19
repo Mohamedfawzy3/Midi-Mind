@@ -42,7 +42,7 @@ const Navbar = () => {
 
   let [userData,setUserData]=useState({})
   const Get_signup_user=(userType,userId)=>{
-axios.get(`https://localhost:7189/api/${userType}/id?id=${userId}`)
+axios.get(`http://mohamedfawzy3-001-site1.atempurl.com/api/${userType}/id?id=${userId}`)
 .then((res)=>{
 setUserData(res.data)
 })

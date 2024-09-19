@@ -47,7 +47,7 @@ const Doctor = () => {
     console.log(token);
 
     axios
-      .post("https://localhost:7189/api/Doctor/addDoctor", Data, {
+      .post("http://mohamedfawzy3-001-site1.atempurl.com/api/Doctor/addDoctor", Data, {
         headers: {
           token: token,
           "Content-Type": "multipart/form-data",

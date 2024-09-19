@@ -34,7 +34,7 @@ const Patiant = () => {
   }, [reload]);
   const getPatiantInfo = () => {
     axios
-      .get(`https://localhost:7189/api/Patient/id?id=${id}`)
+      .get(`http://mohamedfawzy3-001-site1.atempurl.com/api/Patient/id?id=${id}`)
       .then((res) => {
         setPatient(res.data);
         console.log(patient)
@@ -44,7 +44,7 @@ const Patiant = () => {
   };
   const get_notes = () => {
     axios
-      .get(`https://localhost:7189/api/PatientNotes/${id}`)
+      .get(`http://mohamedfawzy3-001-site1.atempurl.com/api/PatientNotes/${id}`)
       .then((res) => {
         setPatent_notes(res.data);
       })
@@ -60,7 +60,7 @@ const Patiant = () => {
     setNote_disabled_btn("disabled")
     const NewNote = { "patientId": id, "note": note };
     axios
-      .post("https://localhost:7189/api/PatientNotes", NewNote)
+      .post("http://mohamedfawzy3-001-site1.atempurl.com/api/PatientNotes", NewNote)
       .then((res) => {
         setReload(res.data)
         console.log(res);
@@ -79,7 +79,7 @@ const Patiant = () => {
  }
 const git_blood_presure=()=>{
 
-  axios.get(`https://localhost:7189/api/PatientBloodPressures/${id}`)
+  axios.get(`http://mohamedfawzy3-001-site1.atempurl.com/api/PatientBloodPressures/${id}`)
   .then(res=>{
     const index=res.data.length-1
     const element=res.data[index]
@@ -92,7 +92,7 @@ const git_blood_presure=()=>{
     console.log(err.response.data)})
 }
 const git_suger=()=>{
-  axios.get(`https://localhost:7189/api/PatientBloodSugers/${id}`)
+  axios.get(`http://mohamedfawzy3-001-site1.atempurl.com/api/PatientBloodSugers/${id}`)
   .then(res=>{
     const index=res.data.length-1
     const element=res.data[index]

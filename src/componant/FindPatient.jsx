@@ -12,7 +12,7 @@ const FindPatient = () => {
   useEffect(() => {}, []);
   const chech_Patient_account = () => {
     axios
-      .get(`https://localhost:7189/api/Patient/ssn?ssn=${patient_ssn}`)
+      .get(`http://mohamedfawzy3-001-site1.atempurl.com/api/Patient/ssn?ssn=${patient_ssn}`)
       .then((res) => {
         console.log(res)
         

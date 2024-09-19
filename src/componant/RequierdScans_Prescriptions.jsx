@@ -15,7 +15,7 @@ const [msg,setMsg]=useState("");
 
   const Get_required = () => {
     axios
-      .get(`https://localhost:7189/api/Requierd${type}/${PatientId}`)
+      .get(`http://mohamedfawzy3-001-site1.atempurl.com/api/Requierd${type}/${PatientId}`)
       .then((res) => setRequiredData(res.data))
       .catch((err) => {
         setMsg(err.response.data)
@@ -37,9 +37,9 @@ const [msg,setMsg]=useState("");
     axios
       .post(
         type === "Scans"
-          ? `https://localhost:7189/api/visitRadiology`
+          ? `http://mohamedfawzy3-001-site1.atempurl.com/api/visitRadiology`
           : type === "Tests"
-          ? "https://localhost:7189/api/visitLab"
+          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/visitLab"
           : null,
         formData,
         {
@@ -59,9 +59,9 @@ const [msg,setMsg]=useState("");
     axios
       .delete(
         type === "Scans"
-          ? `https://localhost:7189/api/RequierdScans/${id}`
+          ? `http://mohamedfawzy3-001-site1.atempurl.com/api/RequierdScans/${id}`
           : type === "Tests"
-          ? `https://localhost:7189/api/RequierdTests/${id}`
+          ? `http://mohamedfawzy3-001-site1.atempurl.com/api/RequierdTests/${id}`
           : null
       )
       .then((res) => {

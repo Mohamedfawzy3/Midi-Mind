@@ -53,7 +53,7 @@ const Patient = () => {
     setButton_display("disabled");
     user_info_form();
     axios
-      .post("https://localhost:7189/api/Patient/AddPatient", formData, {
+      .post("http://mohamedfawzy3-001-site1.atempurl.com/api/Patient/AddPatient", formData, {
         headers: {
           token: token,
           "Content-Type": "multipart/form-data",

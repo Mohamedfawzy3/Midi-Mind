@@ -43,17 +43,17 @@ const Users = () => {
     axios
       .post(
         role == "Lab"
-          ? "https://localhost:7189/api/Lab/AddLab"
+          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/Lab/AddLab"
           : role == "Pharmacy"
-          ? "https://localhost:7189/api/Pharmacy/AddPharmacy"
+          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/Pharmacy/AddPharmacy"
           : role == "Radiology"
-          ? "https://localhost:7189/api/Radiology/AddRadiology"
+          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/Radiology/AddRadiology"
           : role == "Clinic"
-          ? "https://localhost:7189/api/Clinic/addClinic"
+          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/Clinic/addClinic"
           : role == "Hospital"
-          ?"https://localhost:7189/api/Hospital/AddHospital"
+          ?"http://mohamedfawzy3-001-site1.atempurl.com/api/Hospital/AddHospital"
           : role == "HealthUnit"
-          ?"https://localhost:7189/api/HealthUnit/AddHealthUnit"
+          ?"http://mohamedfawzy3-001-site1.atempurl.com/api/HealthUnit/AddHealthUnit"
          : null,
         formData,
         {

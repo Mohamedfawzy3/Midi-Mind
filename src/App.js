@@ -17,6 +17,7 @@ import PatiantRegister from "./componant/Register/Patiant";
 import { Suspense, useEffect } from "react";
 import FindPatient from "./componant/FindPatient";
 import RequierdScans_Prescriptions from "./componant/RequierdScans_Prescriptions";
+import StanderdErrorBoundry from "./componant/ErrorBoundry/StanderdErrorBoundry";
 const Rosheta = React.lazy(() => import("./componant/Rosheta"));
 const Tahalil = React.lazy(() => import("./componant/Tahalil"));
 const Ashea = React.lazy(() => import("./componant/Ashea"));
@@ -27,10 +28,11 @@ function App() {
   //   },[])
   return (
     <>
+    <StanderdErrorBoundry>
     <Suspense
       fallback={
         <div className="d-flex justify-content-center align-items-center">
-          {" "}
+         
           <div>waiting...</div>
         </div>
       }
@@ -78,6 +80,7 @@ function App() {
         </Routes>
       </HashRouter>
     </Suspense>
+    </StanderdErrorBoundry>
     </>
   );
 }

@@ -18,7 +18,7 @@ const Signin = () => {
   };
   const Post=()=>{
     axios
-      .post("https://localhost:7189/Auth/token", user_info)
+      .post("http://mohamedfawzy3-001-site1.atempurl.com/Auth/token", user_info)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("userType",res.data.userType)
@@ -49,7 +49,7 @@ const Signin = () => {
     }
   }, [message]);
   const get_userId=()=>{
-    axios.get("https://localhost:7189/Auth",{headers:{
+    axios.get("http://mohamedfawzy3-001-site1.atempurl.com/Auth",{headers:{
       token:localStorage.getItem("token")
     }})
     .then((res)=>{

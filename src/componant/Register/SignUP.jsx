@@ -604,7 +604,7 @@ const SignUP = () => {
   const AddUser = () => {
     setButton_display("disabled");
     axios
-      .post("https://localhost:7189/Auth/register", user_info)
+      .post("http://mohamedfawzy3-001-site1.atempurl.com/Auth/register", user_info)
       .then((res) => {
         console.log(res);
         localStorage.setItem("token", res.data.token);
