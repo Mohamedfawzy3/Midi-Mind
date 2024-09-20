@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Midi-Mind/static/css/main.2ff3b566.css",
-    "main.js": "/Midi-Mind/static/js/main.3d70c8a1.js",
+    "main.js": "/Midi-Mind/static/js/main.fc8103a0.js",
     "static/css/561.6567d904.chunk.css": "/Midi-Mind/static/css/561.6567d904.chunk.css",
     "static/js/561.e57ac54a.chunk.js": "/Midi-Mind/static/js/561.e57ac54a.chunk.js",
     "static/css/56.31d6cfe0.chunk.css": "/Midi-Mind/static/css/56.31d6cfe0.chunk.css",
@@ -24,7 +24,7 @@
     "static/media/pdf.svg": "/Midi-Mind/static/media/pdf.9ae431294cccc46fea9c16ea41a2fb13.svg",
     "index.html": "/Midi-Mind/index.html",
     "main.2ff3b566.css.map": "/Midi-Mind/static/css/main.2ff3b566.css.map",
-    "main.3d70c8a1.js.map": "/Midi-Mind/static/js/main.3d70c8a1.js.map",
+    "main.fc8103a0.js.map": "/Midi-Mind/static/js/main.fc8103a0.js.map",
     "561.6567d904.chunk.css.map": "/Midi-Mind/static/css/561.6567d904.chunk.css.map",
     "561.e57ac54a.chunk.js.map": "/Midi-Mind/static/js/561.e57ac54a.chunk.js.map",
     "56.4c483c2f.chunk.js.map": "/Midi-Mind/static/js/56.4c483c2f.chunk.js.map",
@@ -32,6 +32,6 @@
   },
   "entrypoints": [
     "static/css/main.2ff3b566.css",
-    "static/js/main.3d70c8a1.js"
+    "static/js/main.fc8103a0.js"
   ]
 }
