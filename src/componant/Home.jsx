@@ -32,6 +32,7 @@ const Home = () => {
       navigate(`/Patiant/${localStorage.getItem("Id")}`);
       console.log("fffff");
     }
+    else navigate("/signup")
   };
 
   return (

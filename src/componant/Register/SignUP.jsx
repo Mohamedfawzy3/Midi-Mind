@@ -569,7 +569,7 @@ const SignUP = () => {
     governorate: "",
     city: "",
     street: "",
-    password: "Mohamed%1234",
+    password: "",
   });
   const HandleSumbit = (e) => {
     if (e.target.name === gov) {
@@ -604,7 +604,7 @@ const SignUP = () => {
   const AddUser = () => {
     setButton_display("disabled");
     axios
-      .post("http://mohamedfawzy3-001-site1.atempurl.com/Auth/register", user_info)
+      .post("https://midimind.runasp.net/Auth/register", user_info)
       .then((res) => {
         console.log(res);
         localStorage.setItem("token", res.data.token);

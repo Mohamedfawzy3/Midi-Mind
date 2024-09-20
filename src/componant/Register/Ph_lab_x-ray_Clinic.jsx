@@ -43,17 +43,17 @@ const Users = () => {
     axios
       .post(
         role == "Lab"
-          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/Lab/AddLab"
+          ? "https://midimind.runasp.net/api/Lab/AddLab"
           : role == "Pharmacy"
-          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/Pharmacy/AddPharmacy"
+          ? "https://midimind.runasp.net/api/Pharmacy/AddPharmacy"
           : role == "Radiology"
-          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/Radiology/AddRadiology"
+          ? "https://midimind.runasp.net/api/Radiology/AddRadiology"
           : role == "Clinic"
-          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/Clinic/addClinic"
+          ? "https://midimind.runasp.net/api/Clinic/addClinic"
           : role == "Hospital"
-          ?"http://mohamedfawzy3-001-site1.atempurl.com/api/Hospital/AddHospital"
+          ?"https://midimind.runasp.net/api/Hospital/AddHospital"
           : role == "HealthUnit"
-          ?"http://mohamedfawzy3-001-site1.atempurl.com/api/HealthUnit/AddHealthUnit"
+          ?"https://midimind.runasp.net/api/HealthUnit/AddHealthUnit"
          : null,
         formData,
         {

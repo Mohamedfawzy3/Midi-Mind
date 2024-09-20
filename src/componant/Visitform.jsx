@@ -48,7 +48,7 @@ const Visitform = () => {
     setTests_btn_apperance("disabled")
     e.preventDefault();
     axios
-      .post("http://mohamedfawzy3-001-site1.atempurl.com/api/RequierdTests", tahalil, {
+      .post("https://midimind.runasp.net/api/RequierdTests", tahalil, {
         headers: {
           token: localStorage.getItem("token"),
         },
@@ -64,7 +64,7 @@ const Visitform = () => {
     e.preventDefault();
     setXray_btn_apperance("disabled")
     axios
-      .post("http://mohamedfawzy3-001-site1.atempurl.com/api/RequierdScans", ashea, {
+      .post("https://midimind.runasp.net/api/RequierdScans", ashea, {
         headers: {
           token: localStorage.getItem("token"),
         },
@@ -81,7 +81,7 @@ const Visitform = () => {
     setRosheta_btn_apperance("disabled")
     e.preventDefault();
     axios
-      .post("http://mohamedfawzy3-001-site1.atempurl.com/api/PatientsVisitClinics", RoshetaInForm, {
+      .post("https://midimind.runasp.net/api/PatientsVisitClinics", RoshetaInForm, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

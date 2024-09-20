@@ -13,7 +13,7 @@ const Rosheta = () => {
     const navigate=useNavigate()
     useEffect(() => {
       axios
-        .get(`http://mohamedfawzy3-001-site1.atempurl.com/api/PatientsVisitClinics/${id}`)
+        .get(`https://midimind.runasp.net/api/PatientsVisitClinics/${id}`)
         .then((res) => {
           console.log(res.data)
           setVisition_info(res.data);

@@ -9,7 +9,7 @@ const Ashea = () => {
   let [msg_apper, setMsg_apper] = useState("");
   useEffect(() => {
     axios
-      .get(`http://mohamedfawzy3-001-site1.atempurl.com/api/visitRadiology/${id}`)
+      .get(`https://midimind.runasp.net/api/visitRadiology/${id}`)
       .then((res) => {
         setAshea(res.data);
       })

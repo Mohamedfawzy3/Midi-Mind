@@ -16,7 +16,7 @@ const Blood_Pressure = () => {
   }, [reload]);
   const get_record_reading = () => {
     axios
-      .get(`http://mohamedfawzy3-001-site1.atempurl.com/api/Patient${type}/${id}`)
+      .get(`https://midimind.runasp.net/api/Patient${type}/${id}`)
       .then((res) => {
         setReading_data(res.data.reverse());
       })
@@ -32,7 +32,7 @@ const Blood_Pressure = () => {
   let NewReading = (e) => {
     e.preventDefault();
     axios
-      .post(`http://mohamedfawzy3-001-site1.atempurl.com/api/Patient${type}`, readingObject)
+      .post(`https://midimind.runasp.net/api/Patient${type}`, readingObject)
       .then((res) => setReload(res.data))
 
       .catch((err) => console.log(err));

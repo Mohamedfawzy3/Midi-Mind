@@ -18,7 +18,7 @@ const Signin = () => {
   };
   const Post=()=>{
     axios
-      .post("http://mohamedfawzy3-001-site1.atempurl.com/Auth/token", user_info)
+      .post("https://midimind.runasp.net/Auth/token", user_info)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("userType",res.data.userType)
@@ -49,11 +49,10 @@ const Signin = () => {
     }
   }, [message]);
   const get_userId=()=>{
-    axios.get("http://mohamedfawzy3-001-site1.atempurl.com/Auth",{headers:{
+    axios.get("https://midimind.runasp.net/Auth",{headers:{
       token:localStorage.getItem("token")
     }})
     .then((res)=>{
-      console.log(res.data)
       localStorage.setItem("Id",res.data.id)})
     .catch(err=>console.log(err.response.data))
   }

@@ -53,7 +53,7 @@ const Patient = () => {
     setButton_display("disabled");
     user_info_form();
     axios
-      .post("http://mohamedfawzy3-001-site1.atempurl.com/api/Patient/AddPatient", formData, {
+      .post("https://midimind.runasp.net/api/Patient/AddPatient", formData, {
         headers: {
           token: token,
           "Content-Type": "multipart/form-data",

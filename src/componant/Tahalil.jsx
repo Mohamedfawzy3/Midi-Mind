@@ -7,7 +7,7 @@ const Tahalil = () => {
     const[tahalil,setTahalil]=useState()
     let[msg_apper,setMsg_apper]=useState("")
     useEffect(()=>{
-axios.get(`http://mohamedfawzy3-001-site1.atempurl.com/api/visitLab/${id}`)
+axios.get(`https://midimind.runasp.net/api/visitLab/${id}`)
 .then((res) => {
     setTahalil(res.data);
   })

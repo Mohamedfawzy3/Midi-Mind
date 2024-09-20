@@ -15,7 +15,7 @@ const [msg,setMsg]=useState("");
 
   const Get_required = () => {
     axios
-      .get(`http://mohamedfawzy3-001-site1.atempurl.com/api/Requierd${type}/${PatientId}`)
+      .get(`https://midimind.runasp.net/api/Requierd${type}/${PatientId}`)
       .then((res) => setRequiredData(res.data))
       .catch((err) => {
         setMsg(err.response.data)
@@ -37,9 +37,9 @@ const [msg,setMsg]=useState("");
     axios
       .post(
         type === "Scans"
-          ? `http://mohamedfawzy3-001-site1.atempurl.com/api/visitRadiology`
+          ? `https://midimind.runasp.net/api/visitRadiology`
           : type === "Tests"
-          ? "http://mohamedfawzy3-001-site1.atempurl.com/api/visitLab"
+          ? "https://midimind.runasp.net/api/visitLab"
           : null,
         formData,
         {
@@ -59,9 +59,9 @@ const [msg,setMsg]=useState("");
     axios
       .delete(
         type === "Scans"
-          ? `http://mohamedfawzy3-001-site1.atempurl.com/api/RequierdScans/${id}`
+          ? `https://midimind.runasp.net/api/RequierdScans/${id}`
           : type === "Tests"
-          ? `http://mohamedfawzy3-001-site1.atempurl.com/api/RequierdTests/${id}`
+          ? `https://midimind.runasp.net/api/RequierdTests/${id}`
           : null
       )
       .then((res) => {
