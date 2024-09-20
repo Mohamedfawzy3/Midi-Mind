@@ -49,7 +49,7 @@ const Blood_Pressure = () => {
           <h3>سجل قراءات مستوى السكر </h3>
         )}
 
-        <div className="d-flex gap-3">
+        <div className="d-flex gap-3 flex-column flex-sm-row">
           {/* add new raeding */}
           <div className="col-12 col-sm-2 col-md-4 bg-white container rounded-3 py-3">
             <h4>قراءه جديده</h4>
