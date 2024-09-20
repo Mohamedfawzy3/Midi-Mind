@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Midi-Mind/static/css/main.ae4f5621.css",
-    "main.js": "/Midi-Mind/static/js/main.40e986e0.js",
+    "main.css": "/Midi-Mind/static/css/main.2ff3b566.css",
+    "main.js": "/Midi-Mind/static/js/main.3d70c8a1.js",
     "static/css/561.6567d904.chunk.css": "/Midi-Mind/static/css/561.6567d904.chunk.css",
-    "static/js/561.871e747f.chunk.js": "/Midi-Mind/static/js/561.871e747f.chunk.js",
+    "static/js/561.e57ac54a.chunk.js": "/Midi-Mind/static/js/561.e57ac54a.chunk.js",
     "static/css/56.31d6cfe0.chunk.css": "/Midi-Mind/static/css/56.31d6cfe0.chunk.css",
-    "static/js/56.97a2cbc6.chunk.js": "/Midi-Mind/static/js/56.97a2cbc6.chunk.js",
+    "static/js/56.4c483c2f.chunk.js": "/Midi-Mind/static/js/56.4c483c2f.chunk.js",
     "static/js/453.b600e3d4.chunk.js": "/Midi-Mind/static/js/453.b600e3d4.chunk.js",
     "static/media/contact.jpg": "/Midi-Mind/static/media/contact.a4c3df86e9eacb90e05f.jpg",
+    "static/media/shapes-light.png": "/Midi-Mind/static/media/shapes-light.2ce136cf8da094de293d.png",
     "static/media/logo5.png": "/Midi-Mind/static/media/logo5.01e97ee5869939d34b21.png",
     "static/media/RR.jpg": "/Midi-Mind/static/media/RR.80c0a0969088b40493cb.jpg",
-    "static/media/Home7.png": "/Midi-Mind/static/media/Home7.757e244aa83588098127.png",
     "static/media/SS.jpg": "/Midi-Mind/static/media/SS.67198d5dd610603bb045.jpg",
     "static/media/TT.jpg": "/Midi-Mind/static/media/TT.524f9b95ead6a5cfb6b1.jpg",
     "static/media/DD.jpg": "/Midi-Mind/static/media/DD.0f4b2e2f5c973e66e6cc.jpg",
@@ -23,15 +23,15 @@
     "static/media/XX.jpg": "/Midi-Mind/static/media/XX.6a179fc9f96b26b87e44.jpg",
     "static/media/pdf.svg": "/Midi-Mind/static/media/pdf.9ae431294cccc46fea9c16ea41a2fb13.svg",
     "index.html": "/Midi-Mind/index.html",
-    "main.ae4f5621.css.map": "/Midi-Mind/static/css/main.ae4f5621.css.map",
-    "main.40e986e0.js.map": "/Midi-Mind/static/js/main.40e986e0.js.map",
+    "main.2ff3b566.css.map": "/Midi-Mind/static/css/main.2ff3b566.css.map",
+    "main.3d70c8a1.js.map": "/Midi-Mind/static/js/main.3d70c8a1.js.map",
     "561.6567d904.chunk.css.map": "/Midi-Mind/static/css/561.6567d904.chunk.css.map",
-    "561.871e747f.chunk.js.map": "/Midi-Mind/static/js/561.871e747f.chunk.js.map",
-    "56.97a2cbc6.chunk.js.map": "/Midi-Mind/static/js/56.97a2cbc6.chunk.js.map",
+    "561.e57ac54a.chunk.js.map": "/Midi-Mind/static/js/561.e57ac54a.chunk.js.map",
+    "56.4c483c2f.chunk.js.map": "/Midi-Mind/static/js/56.4c483c2f.chunk.js.map",
     "453.b600e3d4.chunk.js.map": "/Midi-Mind/static/js/453.b600e3d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae4f5621.css",
-    "static/js/main.40e986e0.js"
+    "static/css/main.2ff3b566.css",
+    "static/js/main.3d70c8a1.js"
   ]
 }
