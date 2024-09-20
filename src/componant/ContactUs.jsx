@@ -74,7 +74,7 @@ const ContactUs = () => {
             </form>
           </div>
         </div>
-      </section>e:\te\Garduation\version1\src\componant\Ashea.jsx
+      </section>
     </div>
   );
 };
