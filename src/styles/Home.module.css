@@ -261,6 +261,7 @@ ul li {
   position: relative;
   width: 120px;
   height: 120px;
+  z-index: -1;
 }
 
 .rectanglebox img {
